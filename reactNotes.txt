@@ -1,0 +1,78 @@
+import Add from "./Components/Add";
+import Greet from "./Components/Greet";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import MainContent from "./Components/MainContent";
+function App() {
+  return <div>
+    <Header/>
+    <Footer/>
+    <MainContent/>
+    {/* <Greet/>
+    <Add/> */}
+  </div>
+}
+export default App; 
+
+-------------------------------------
+import React from 'react'
+
+const App = () => {
+  return (
+    <section id='section'>
+      <h1>My Website</h1>
+      <article>
+        <h2>Welcome To React</h2>
+        <p className='text'>Paragraph Content</p>
+      </article>
+    </section>
+  )
+}
+
+export default App
+--------------------------------------
+import React from 'react'
+import WelcomeMessage from './Components/WelcomeMessage'
+
+const App = () => {
+  return (
+    <div>
+      <WelcomeMessage/>
+    </div>
+  )
+}
+
+export default App
+---------------------------------------
+import React from 'react'
+import JSXRules from './Components/JSXRules'
+
+const App = () => {
+  return (
+    <div>
+      <JSXRules/>
+    </div>
+  )
+}
+
+export default App
+--------------------------------------
+import React from 'react'
+
+const App = () => {
+  const myName = "Tanvi Handa"
+  const multiply = (a,b) => a*b;
+  const specialClass = 'simple-class'
+  return (
+    <section>
+      <p>{2+2}</p>
+      <h1>{myName}</h1>
+      <p>My Friends List : {["Alex","John","Reya"]}</p>
+      <p>2*2 = {multiply(2,2)}</p>
+      <p className={specialClass}>This is special class</p>
+    </section>
+  )
+}
+
+export default App
+---------------------------------------
