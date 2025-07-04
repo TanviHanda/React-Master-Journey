@@ -1,12 +1,9 @@
 import React from 'react'
-import Greeting from './Components/Greeting'
-import ProductInfo from './Components/ProductInfo'
-
+import Notes from './Components/Notes'
 const App = () => {
   return (
     <div>
-      <Greeting/>
-      <ProductInfo/>
+      <Notes/>
     </div>
   )
 }
