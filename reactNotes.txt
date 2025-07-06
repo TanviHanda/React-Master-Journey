@@ -9,7 +9,13 @@ import Greeting from './Components/Greeting'
 import ProductInfo from './Components/ProductInfo'
 import UserList from './Components/UserList'
 import ProductList from './Components/ProductList'
-
+import Notes from './Components/Notes';
+import Weather from './Components/Weather';
+import UserStates from './Components/UserStates';
+import Greetings from './Components/Greetings';
+import StyledCard from './Components/StyledCard'
+import ProfileCard from './Components/ProfileCard'
+import IconComponent from './Components/IconComponent'
 function App() {
   return <div>
     <Header/>
@@ -23,6 +29,12 @@ function App() {
     <ProductInfo/>
     <UserList/>
     <ProductList/>
+    <Weather />
+    <UserStates loggedIn={true} isadmin={true} />
+    <Greetings timeOfDay="morning" />
+    <StyledCard/> 
+      <ProfileCard/>
+      <IconComponent/>
   </div>
 }
 export default App; 
@@ -196,3 +208,69 @@ const App = () => {
 };
 
 export default App;
+---------------------------------------
+import React from 'react';
+import { FaCartArrowDown } from "react-icons/fa";
+
+import Notes from './Components/Notes'
+// const styles = {color:"white",backgroundColor:"teal",padding:"2rem"}
+import "./index.css";
+const App = () => {
+  return (
+    <div>
+      {/* <Notes /> */}
+      {/* <h1 style={styles}>
+        Inline style
+      </h1>
+      <h1 style={{color:"black",backgroundColor:"pink",padding:"2rem"}}>
+        Inline style
+      </h1> */}
+      {/* <h1>seperate file for styling</h1> */}
+      <FaCartArrowDown />
+    </div>
+  );
+};
+
+export default App;
+---------------------------------------
+import React from 'react'
+function moveHandler() {
+  alert("mouse move event fired 🚀")
+  console.log("mouse move event fired 🚀");
+  
+}
+const Move = () => {
+  return(
+    <p onMouseMove={moveHandler}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita delectus a amet beatae deserunt aspernatur facilis maiores aliquam suscipit ea, ducimus excepturi itaque adipisci aperiam sequi! Eum laborum unde inventore?
+    </p>
+  )
+}
+const Copy = () =>{
+  const copyHandler = () => {
+    console.log("stop stealing my content");
+    
+  }
+  return (
+    <p onCopy={copyHandler}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, aspernatur sunt ad quidem eum accusantium exercitationem ex error, ab sit delectus ut. Eum recusandae, assumenda quas aperiam molestiae alias ratione.
+    </p>
+  )
+}
+const Button = () => {
+  const handleClick = () => console.log(Math.round(Math.random()*10));
+  
+  return <button onClick={handleClick}>Click me</button>
+}
+
+const App = () => {
+  return (
+   <section>
+    {/* <Button/> */}
+    {/* <Copy/> */}
+    <Move/>
+   </section>
+  )
+}
+
+export default App

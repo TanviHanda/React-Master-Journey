@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(238, 137, 117);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div{
+    width: fit-content;
+    height: auto;
+    background-color: rgb(242, 255, 0);
+    color: black;
+    padding: 10px;
+    border: 2px solid black;
+}
