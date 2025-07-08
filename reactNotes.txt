@@ -274,3 +274,126 @@ const App = () => {
 }
 
 export default App
+--------------------------------------
+import React from 'react'
+import Notes from './Components/Notes'
+import { useState } from 'react'
+const App = () => {
+  const [count,setCount] = useState(0)
+  const increment = () => setCount(count + 1)
+  const decrement = () => setCount(count - 1)
+  return (
+    <div>
+      <Notes/>
+    <h1>{count}</h1>
+    <button onClick={increment}>inc</button>
+    <button onClick={decrement}>dec</button>
+    </div>
+  )
+}
+
+export default App
+---------------------------------------
+import React from 'react'
+import Notes from './Components/Notes'
+import { useState } from 'react'
+const App = () => {
+  const [friends,setFriends] = useState(["alex","john"])
+  const addOneFriend = () => setFriends([...friends,"reya"])
+  const delOneFriend = () => setFriends(friends.filter((f) => f != "john"))
+  const updateFriend = () => setFriends(friends.map(f => f === 'alex' ? 'alex Smith' : f))
+  return (
+    <div>
+      <Notes/>
+    <ul>
+      {friends.map((f) =>(
+      <li key={f}>{f}</li>
+    ))}
+    </ul>
+    <button onClick={addOneFriend}>addNewFriend</button>
+    <button onClick={delOneFriend}>delNewFriend</button>
+    <button onClick={updateFriend}>updateNewFriend</button>
+    </div>
+  )
+}
+
+export default App
+------------------------------------
+import React from 'react'
+import Notes from './Components/Notes'
+import Header from './Components/Header'
+import { useState } from 'react'
+const App = () => {
+  const [movie, setMovie] = useState({
+    title:'Equalizer 3',
+    ratings:7,
+  })
+  const handleClick = () => {
+    // const copyMovie = {
+    //   ...movie,
+    //   ratings: 5
+    // }
+    // setMovie(copyMovie);
+
+    // ---->short way
+    setMovie({...movie,ratings:5})
+  }
+  return (
+    
+    <section>
+        <h1>Title: {movie.title}</h1>
+        <p>Ratings: {movie.ratings}</p>
+        <button onClick={handleClick}>Change ratings</button>
+    </section>
+  )
+}
+
+export default App
+--------------------------------------
+import React, { useState } from 'react'
+
+const App = () => {
+  const[movie,setMovie] = useState([
+    {id:1,title:'spider man',ratings:3},
+    {id:2,title:'superman',ratings:6}
+  ]);
+  const ChangeName = () => setMovie(
+    movie.map((f)=>(
+      f.id === 1 ? {...movie,title:"Anaconda"}: f
+    ))
+  )
+  return (
+   <div>
+     {movie.map((f)=>(
+      <ul>
+        <li>
+          {f.title}
+        </li>
+       
+      </ul>
+    ))}
+    <button onClick={ChangeName}>Change Name</button>
+   </div>
+  )
+}
+
+export default App
+-------------------------------------
+import React from 'react'
+import ComponentOne from './Components/ComponentOne';
+import ComponentTwo from './Components/ComponentTwo';
+import { useState } from 'react';
+import FormExample from './Components/FormExample';
+const App = () => {
+  const [count,setCount] = useState(0);
+  return (
+    <section>
+      {/* <ComponentOne count={count} onClickHandler={() => setCount(count+1)}/>
+      <ComponentTwo count={count} onClickHandler={() => setCount(count+1)}/> */}
+      <FormExample/>
+    </section>
+  )
+}
+
+export default App
+------------------------------------
