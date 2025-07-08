@@ -6,14 +6,7 @@ const NoteSection = ({ title, items }) => {
 
   return (
     <div style={{ marginBottom: '1rem' }}>
-      <select>
-        {
-          title.map((m)=>{
-            <option value="">{title}</option>
-          })
-        }
-      </select>
-      
+      <h1>{title}</h1>
       <button style={{backgroundColor:"black",color:"white",padding:"6px 12px"}} onClick={() => setShow(prev => !prev)}>
         {show ? 'Hide' : 'Show'}
       </button>
