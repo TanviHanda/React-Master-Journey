@@ -18,8 +18,17 @@ const notesData = {
     "State is a way to store and manage data that can change over time and affects how the component renders. We define state using the useState Hook, which allows you to set an initial value and provides a way to update that state.",
     "What is a HOOK?",
     "Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.",
-    "useState(): It allows us to track state in a functional component. State generally refers to data or properties that need to be tracked in an application.",
+  ],
+  useState:[
+    "It allows us to track state in a functional component. State generally refers to data or properties that need to be tracked in an application.",
     "Syntax: const [data, changeData] = useState()"
+  ],
+  Portal: [
+    "Portal is a feature that allows you to render a child component into a Dom node that exists outside the hierarchy of the parent component.",
+    "This can be useful for scenarios like modals, tolltips or dropdowns, where you want to break out of the usual parent-child structure and render in a different part of the DOM."
+  ],
+  useEffect: [
+    "It allows you to perform *side effects* in your components. Some examples of side effects are : fetching data, directly updating the DOM etc."
   ]
 };
 

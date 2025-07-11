@@ -1,16 +1,13 @@
 import React from 'react'
-import Counter from './Components/Counter'
-import TodoList from './Components/TodoList'
-import Profile from './Components/Profile'
-import Notes from './Components/Notes'
+import CopyInput from './Components/CopyInput'
+import PopupContent from './Components/PopupContent'
+import Switcher from './Components/Switcher'
 
 const App = () => {
   return (
     <div>
-      <Notes/>
-      <Counter/>
-      <TodoList/>
-      <Profile/>
+      {/* <CopyInput/> */}
+      <Switcher/>
     </div>
   )
 }
