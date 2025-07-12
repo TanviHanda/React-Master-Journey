@@ -1,5 +1,5 @@
 // Notes.jsx
-import React from 'react';
+import React, { useReducer } from 'react';
 import NoteSection from '../Components/NotesSection';
 
 const notesData = {
@@ -29,6 +29,24 @@ const notesData = {
   ],
   useEffect: [
     "It allows you to perform *side effects* in your components. Some examples of side effects are : fetching data, directly updating the DOM etc."
+  ],
+  propDrilling:[
+    "Prop drilling in React refers to the process of passing data or functions from a parent component down through multiple layers of intermediate components to a deeply nested child component that actually needs access to that data or function."
+  ],
+  contextAPI:[
+    "It is a feature that allows you to manage and share state across your component tree without having to pass props down manually at every level.",
+    "It is useful for scenarios where you need to share data or functions across many components, especially when these components are deeply nested."
+  ],
+  useContext:[
+    "It allows us to access the context values provided by a context object directly within a functional component.",
+    "It provides a way to pass data through the component tree without having to pass props down manually at every level."
+  ],
+  useReducer:[
+    "It is similar to useState but it is designed for more complex state objects or state transitions that involves multiplt sub-values",
+    "It allows you to manage state in a functional, immutable way."
+  ],
+  useRef:[
+    "It provides a way to access and interact with DOM elements or to persist values across renders without causing a re-render."
   ]
 };
 
